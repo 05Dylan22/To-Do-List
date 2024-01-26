@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  margin-top: 45px;
+  margin-bottom: 45px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form > label {
+  font-size: 26px;
+  margin: 0;
+  margin-right: 12px;
+}
+
+form > input {
+  height: 32px;
+  width: 225px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 20px;
+  padding-left: 8px;
+}
+
+form > button {
+  height: 38px;
+  width: 115px;
+  border: 3px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.25);
   color: white;
+  transition: all 0.15s;
 }
 
-.App-link {
-  color: #61dafb;
+form > button:hover {
+  background-color: white;
+  color: darkblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li {
+  height: 42px;
+  width: 375px;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  padding-left: 8px;
+  color: black;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  justify-content: space-between;
+  animation: mateIn ease-in 0.75s;
+}
+
+@keyframes leaving {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    opacity: 0;
   }
+}
+
+@keyframes mateIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+li > button {
+  margin-right: 6px;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+li:hover button{
+  background-color: red;
+  color: white;
 }
